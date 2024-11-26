@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../movie ticket booking"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html",
+		"liveServer.settings.port": 5501
+	}
+}

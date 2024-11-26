@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - University Memories</title>
+    <link rel="icon" type="image" href="assests/WhatsApp Image 2024-11-19 at 19.16.33_a5683f47.jpg">
+    <style>
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: Poppins;
+    margin: 0;
+    background-color: #010101;
+    color: #eee;
+    /* overflow: hidden; */
+}
+
+        header{
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    margin-bottom: 50px;
+}
+header .logo{
+    font-weight: bold;
+}
+header .menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    color: gold;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+
+}
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(to bottom, #0a0a0a, #a9acb1); 
+            
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+         margin-bottom: 100px;
+        }
+
+        /* Heading */
+        h2 {
+            font-size: 36px;
+            color: #f0f2f4;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Team Members */
+        .team-members {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px; /* Space between team members */
+        }
+
+        .team-member {
+            width: 18%; /* Adjusted width to fit more members side by side */
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(14, 10, 10, 0.043);
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member img {
+            width: 100%; /* Ensures all images fill the container */
+            height: 250px; /* Standardized height for uniformity */
+            object-fit: cover; /* Ensures images are cropped proportionally */
+            border-bottom: 1px solid #ddd;
+        }
+
+        .team-member h3 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+            color: #060606;
+        }
+        /* Team Member Image Styling */
+        .team-member img {
+            width: 100%; /* Ensures all images fill the container */
+            height: 250px; /* Standardized height for uniformity */
+            object-fit: cover; /* Ensures images are cropped proportionally */
+            border-bottom: 1px solid #ddd;
+            transition: transform 0.3s ease; /* Adds a smooth zoom effect */
+        }
+
+/* Zoom-in effect on hover */
+.team-member:hover img {
+    transform: scale(1.1); /* Zoom in by 10% */
+}
+.team-member .ma{
+    transition: transform 0.3s ease;
+    transform: translateX(-5px);
+    animation:backwards scale(1);
+    color: gold;
+}
+
+        .team-member p {
+            font-size: 14px;
+            color: #555;
+            margin: 0 10px 10px;
+        }
+
+        /* Stay Tuned Button */
+        .stay-tuned-section {
+            margin-top: 30px;
+        }
+
+        .stay-tuned-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #080808;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .stay-tuned-btn:hover {
+            background-color: #636563;
+        }
+       
+
+        /* Add animation styles */
+        @keyframes pop {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+/* Add the pop effect to the team member tiles */
+.team-member.pop-animation {
+    animation: pop 0.3s ease-in-out;
+}
+ .mat {
+    animation: pop 0.7s ease-in-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-member {
+                width: 45%; /* Two members per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-member {
+                width: 100%; /* Single column on very small screens */
+            }
+        }
+        footer{
+    background-color: #05042d;
+    height: 80px;
+}
+footer p {
+    padding-top: 20px ;
+    padding-left: 55px;
+    padding-right: 55px;
+    align-items: center;
+    text-align:center;
+  }    
+  footer ul{
+    display: flex;
+    /* justify-content: space-around; */
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+    justify-content: space-around;
+       gap: 15px;
+       flex-direction: row;
+  }
+  footer ul li{
+    color: #fff;
+    font-size: 15px;
+   margin-top: 20px;
+    gap: 15px;
+    align-items: flex-start;
+    background-color: rgba(207, 116, 41, 0.501);
+    padding:  8px 10px ;
+    /* border-radius: 25px; */
+  }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="" alt=""></div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="meetup.html">meetups click</a></li>
+            <li><a href="html/html/homepage/index.html">E-library</a></li>
+            <li><a href="aboutus.html">about us</a></li>
+        </ul>
+       
+    </header>
+
+    <!-- Team Members Section -->
+   <style>
+    button{
+        background-color: rgb(97, 132, 198);
+        color: #010101;
+        border-radius: 10px;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+        /* margin: 0 100px; */
+    }
+    .team-members .team-member button p{
+    color: #010101;
+    padding-top: 10px;
+    font-size: 1rem;
+    font-weight: 800;
+
+
+    }
+
+    @media (max-width:477px) {
+        .cont{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .wwa h1{
+            padding: 0;
+            margin: 0;
+        }
+        .para{
+            padding: 0 20px;
+        }
+        .menu li{
+            text-align: center;
+        }
+    }
+   </style>
+    <section>
+        <div class="container">
+            <h2>Our Crew Members</h2>
+            
+            <div class="team-members">
+                <!-- Member 1 -->
+                <div class="team-member">
+                    <img src="about us/1.jpg" alt="John Doe">
+                    <h3>V. Mathujan</h3>
+                    <p>Director  (IS STUDENT)</p> <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com""><button> <h3> Contact </h3></button></a>
+                </div>
+                <!-- Member 2 -->
+                <div class="team-member">
+                    <img src="about us/2.jpg" alt="Jane Smith">
+                    <h3>S. Vithuckshana</h3>
+                    <p>Script Writer  (IS STUDENT)</p> <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-member">
+                    <img src="about us/3.jpg" alt="Robert Brown">
+                    <h3>S. Rishikesan</h3>
+                    <p>Editor  (IS STUDENT)</p>   <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-member">
+                    <img src="about us/4.jpg" alt="Robert Brown">
+                    <h3>M. Mathurya</h3>
+                    <p>Videographer   (IS STUDENT)</p>   <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
+       
+                </div>
+
+                <!-- Member 5 -->
+                <div class="team-member">
+                    <img src="about us/5.jpg" alt="Robert Brown">
+                    <h3>E. Mayoori</h3>
+                    <p>Programmer  (IS STUDENT)</p><p></p>   <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
+            </div>
+            <!-- Stay Tuned Button -->
+            <!-- <div class="stay-tuned-section">
+                <a href="#" class="stay-tuned-btn">Stay Tuned</a>
+            </div> -->
+        </div></div>
+        <div class="cont" style="background-color: #b2b4b2; display: flex;
+        flex-direction: row;">
+        <div class="wwa" style="width: 800px; padding-left: 50px; padding-top: 50px;">  
+             <h1 style="color: #060606; font-size: 4rem; font-weight: 800; padding-top: 10px;">Who we are</h1></div>
+         
+            <div class="para" style="width: 1500px; padding: 20px;">   
+                <p style="color: #060606; font-size: 2rem; font-weight: 300; padding: 10px 0 0 10px;">
+               
+                Welcome to Rishikesan.Tech! </p><p style="color: #060606; font-size: 0.8rem;">   We are a group of five friends from Jaffna, united by the shared memories of our first-year university days at Sabaragamuwa 
+                University. What started as a simple bond of friendship has now blossomed into this creative space where
+                 we can relive our cherished moments together.
+                Through this website, we aim to share a piece of our journey — from unforgettable memories to snapshots of
+                
+                our university life. You'll find a collection of photos, stories, and experiences that capture the essence
+                 of our time together.
+                In addition to personal memories, Rishikesan.Tech also offers a selection of eBooks that we believe will be
+                 valuable to students and anyone eager to learn. Whether you're here to relive
+                  our memories, find useful resources, or simply connect with a community of like-minded individuals, 
+                  we hope you find something meaningful.</p>
+             
+                <p style="color: #060606; font-size: 0.8rem; padding-bottom: 30px;">Thank you for visiting our website, and we invite you to join us in celebrating the spirit of friendship, learning, and growth!</p>
+                
+                </div>
+         
+        </div>
+    </section>
+    <footer>
+      
+        
+        <p>
+            Copyright 2024 © Jaffna IS - All Rights Reserved.
+
+        </p>
+    </footer>
+
+</body>
+</html>

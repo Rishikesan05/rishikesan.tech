@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Library</title>
+    <link rel="icon" type="image" href="img/Books/e-Library 2.png">
+     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="../img/Books/e-Library 2.png" class="logo" alt="Logo" style="height: 80px;"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="books.html">Books</a></li>
+                <li><a href="review.html">Reviews</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="../contact.html">Contact</a></li> -->
+                <!-- <li id="lg-bag"><a href="../read.html"><i class='bx bxs-book-add'></i></a></li>
+                <a href="#" id="close"><i class='bx bx-x' ></i></a> -->
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href=""><i class='bx bxs-book-add'></i></a>
+            <i id="bar" class='bx bx-menu'></i>
+            
+        </div>
+    </section>
+
+    <section id="page-header">
+        <h2>#readmore</h2>
+        <p>Discover, learn, and grow with us today!. Happy reading!</p>
+    </section>
+
+    <!-- <section class="search" class="section-p1">
+        <div class="form">
+            <form>
+                <input type="text" id="search-book" placeholder="Search Book">
+                <button class="normal"><i class='bx bx-search-alt'></i></button>
+            </form>
+        </div>
+    </section> -->
+    <!-- <section id="search" class="section-p1 section-m1">
+        <form>
+            <input type="text" id="search-item" placeholder="Search Book" onkeyup="sarch()">
+            <button class="normal"><i class='bx bx-search-alt'></i></button>
+        </form>
+    </section> -->
+
+
+
+    <section id="book1" class="section-p1">
+
+        <form>
+            <input type="text" id="search-item" placeholder="Search Book" onkeyup="search()">
+            <button class="normal"><i class='bx bx-search-alt'></i></button>
+        </form>
+
+
+
+        <div class="book-container" id="book-container">
+
+         
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook5.html' ">
+                <img src="../img/Books/B5.png" alt="">
+                <div class="des" >
+                    <span>Fantasy</span>
+                    <h5>The Fellowship of the Ring</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Novel by Reuel Tolkien</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook6.html' ">
+                <img src="../img/Books/B6.png" alt="">
+                <div class="des" >
+                    <span>omantic Novel</span>
+                    <h5>Forget Me Not</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Novel by Fidda Kabir</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook7.html' ">
+                <img src="../img/Books/B7.png" alt="">
+                <div class="des" >
+                    <span>Romantic Novel</span>
+                    <h5>The Five Love Languages</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Book by Gary Chapman</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook8.html' ">
+                <img src="../img/Books/B8.png" alt="">
+                <div class="des">
+                    <span>Domestic Fiction</span>
+                    <h5>The God of Small Things</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Novel by Arundhati Roy</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook9.html' "> 
+                <img src="../img/Books/B9.png" alt="">
+                <div class="des">
+                    <span>Self-help Book</span>
+                    <h5>The Power of Now</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Book by Eckhart Tolle</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook10.html' ">
+                <img src="../img/Books/B10.png" alt="">
+                <div class="des" >
+                    <span>Self-help Book</span>
+                    <h5>The Power of Positive Thinking</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Book by Norman Vincent Peale</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook11.html' ">
+                <img src="../img/Books/B11.png" alt="">
+                <div class="des" >
+                    <span>Biography</span>
+                    <h5>Man's Search for Meaning</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Book by Viktor Frankl</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook12.html' ">
+                <img src="../img/Books/B12.png" alt="">
+                <div class="des">
+                    <span>Self-help Book</span>
+                    <h5>You can</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Novel by George Matthew</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook13.html' ">
+                <img src="../img/Books/B13.png" alt="">
+                <div class="des">
+                    <span>Self-help Book</span>
+                    <h5>Lasting Love</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Book by Alistair Begg</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook14.html' ">
+                <img src="../img/Books/B14.png" alt="">
+                <div class="des" >
+                    <span>Romantic Novel</span>
+                    <h5>Worthy of Her Trust</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Book by M. Stephen</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook15.html' ">
+                <img src="../img/Books/B15.png" alt="">
+                <div class="des">
+                    <span>Self-help Book</span>
+                    <h5>Every Young Man's Battle</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Book by M. Stephen</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+            <div class="book" onclick="window.location.href='../homepage/Single Pages/sbook16.html' ">
+                <img src="../img/Books/B16.png" alt="">
+                <div class="des">
+                    <span>Self-help Book</span>
+                    <h5>Look Unto Me In Every Thought</h5>
+                    <div class="star">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <h4>Book by Jakob R. Jones</h4>
+                </div>
+                <a href="#"><i class='bx bxs-book-add add'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pagination" class="section-p1">
+        <a href="books.html">1</a>
+        <a href="boosk2.html">2</a>
+        <!-- <a href="#"><i class='bx bx-right-arrow-alt' ></i></a> -->
+    </section>
+    <!-- 
+        <section id="newsletter" class="section-p1 section-m1">
+            <div class="newstext">
+                <h4>Sign up for Newsletters</h4>
+                <p>Get E-mail updates about our E-library and <span>New Books Updates.</span></p>
+            </div>
+            <div class="form">
+                <input type="email" placeholder="Your E-mail address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section> -->
+    
+        <footer class="section-p1" style="background-color: rgb(125, 125, 136);">
+            <div class="col"  style="color: black;">
+                <!-- <img  class="logo" src="../img/Books/logo2.jpg" class="logo" alt="Logo" style="height: 200px; padding: 0;
+                margin: 0; position: relative;
+                bottom: 40px;" alt=""> -->
+                <h4>Contact</h4>
+                <p  style="color: black;"><strong>Address : </strong>Temple road, kaithady west, kaithady,Jaffna </p>
+                <p  style="color: black;"><strong>Phone : </strong> +94 0720210505</p>
+                <p  style="color: black;"><strong>Hours : </strong> 09.00 - 15.00 Mon - Fri</p>
+    
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <a href="nots.html"><i  style="color: black;" class='bx bxl-facebook'></i></a>  
+                        <a href="nots.html"> <i  style="color: black;"class='bx bxl-twitter' ></i></a>   
+                        <a href="nots.html"><i style="color: black;" class='bx bxl-instagram-alt' ></i></a>   
+                        <a href="nots.html"><i style="color: black;" class='bx bxl-youtube' ></i></a>  
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About Us</a>
+                <a href="books.html">Books Information</a>
+                <a href="/aboutus.html">Members</a>
+                <a href="#">Terms & Conditions</a>
+                <!-- <a href="#">Contact Us</a> -->
+            </div>
+    
+            <!-- <div class="col">
+                <h4>My Account</h4>
+                < <a href="#">Sign In</a> -->
+                <!-- <a href="#">Books Information</a>
+                <a href="#">View Future Books</a>
+                <a href="#">Books Available</a>
+                <a href="#">Help</a>
+            </div> --> 
+    
+            <div class="col install">
+                <h4>Install App</h4>
+                <p  style="color: black;">From App Store or GooglePlay</p>
+    
+                <div class="row">
+                <a href="nots.html"><img src="../img/pay/app.jpg"></a>    
+                <a href="nots.html"> <img src="../img/pay/play.jpg">
+               </a>  </div>
+            </div>
+    
+            <div class="copyright">
+                <P style="color: black;" class="mathu">Copyright 2024 © Jaffna IS - All Rights Reserved</P>
+            </div>
+        </footer>
+    
+    
+        <script src="script.js"></script>
+    </body>
+    </html>

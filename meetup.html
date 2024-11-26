@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - University Memories</title>
+    <link rel="icon" type="image" href="assests/WhatsApp Image 2024-11-19 at 19.16.33_a5683f47.jpg">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: Poppins;
+    margin: 0;
+    background-color: #010101;
+    color: #eee;
+    /* overflow: hidden; */
+}
+svg{
+    width: 25px;
+}
+h2{
+    color: #eee;
+}
+header{
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+header .logo{
+    font-weight: bold;
+}
+header .menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    color: gold;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+
+}
+
+        /* Container Styles */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            z-index: -10;
+        }
+
+        /* Collage Grid Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);  /* 4 columns for a collage-style layout */
+            grid-gap: 5px;
+            padding: 20px;
+        }
+
+        .meet-up-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        
+
+        .meet-up-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+            border: 1px black;
+        }
+
+        .meet-up-item:hover img {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        /* Allow images to span across multiple rows or columns */
+        /* You can use the grid-column and grid-row properties to control image span */
+        .large-item {
+            grid-column: span 2; /* Spans across 2 columns */
+            grid-row: span 2;    /* Spans across 2 rows */
+        }
+
+        .small-item {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .meet-up-section h2 {
+            color: transparent; /* Make the text transparent */
+            font-size: 35px; /* Slightly larger font size for emphasis */
+            font-weight: bold;
+            text-align: center;
+            margin: 40px 0;
+            background: url('images/images.jpeg') no-repeat center center;
+            background-clip: text;
+            -webkit-background-clip: text; /* For Safari */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Lobster', cursive; /* New font style */
+        }
+
+        .about-us-btn-section {
+            display: flex;
+            justify-content: center;  /* Horizontally center the button */
+            align-items: center;      /* Vertically center the button (optional) */
+            margin-top: 30px;         /* Space above the button */
+        }
+        
+
+        .about-us-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #080808;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s ease;
+            display: inline-block;
+            
+        }
+            /* Center the About Us Button */
+
+
+        .about-us-btn:hover {
+            background-color: #707071; /* Darker blue on hover */
+        }
+        footer{
+    background-color: #05042d;
+    height: 150px;
+}
+footer p {
+    padding-top: 30px ;
+    padding-left: 55px;
+    padding-right: 55px;
+    align-items: center;
+    text-align:center;
+  }    
+  footer ul{
+    display: flex;
+    /* justify-content: space-around; */
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+    justify-content: space-around;
+       gap: 15px;
+       flex-direction: row;
+  }
+  footer ul li{
+    color: #fff;
+    font-size: 15px;
+   margin-top: 20px;
+    gap: 15px;
+    align-items: flex-start;
+    background-color: rgba(207, 116, 41, 0.501);
+    padding:  8px 10px ;
+    /* border-radius: 25px; */
+  }
+
+
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="" alt=""></div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="meetup.html">meetups click</a></li>
+            <li><a href="html/html/homepage/index.html">E-library</a></li>
+            <li><a href="aboutus.html">about us</a></li>
+        </ul>
+       
+    </header>
+    <!-- First Meetup Section -->
+    <section class="meet-up-section">
+        <h2 style="color: #eee; ">Kandy Meetup clicks</h2>
+        <div class="container">
+            <!-- First Meetup Grid (Collage Style) -->
+            <div class="gallery-grid">
+                <!-- Add 30 photos, some will span across 2 columns or rows -->
+
+                <div class="meet-up-item large-item">
+                    <img src="assests/20190629012409_IMG_4228[1].jpg" alt="First Meetup Photo 1">
+                </div>
+                <div class="meet-up-item">
+                    <img src="assests/20190629014916_IMG_4261[1].jpg" alt="First Meetup Photo 2">
+                </div>
+                <div class="meet-up-item">
+                    <img src="assests/20190629015219_IMG_4269[1].jpg" alt="First Meetup Photo 3">
+                </div>
+                <div class="meet-up-item large-item">
+                    <img src="assests/20190629020007_IMG_4283[1].jpg" alt="First Meetup Photo 4">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="assests/20190629020020_IMG_4284[1].jpg" alt="First Meetup Photo 5">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="assests/20190629020039_IMG_4285[1].jpg" alt="First Meetup Photo 6">
+                </div>
+                <div class="meet-up-item small-item">
+                    <img src="assests/20190629020048_IMG_4286[1].jpg" alt="First Meetup Photo 7">
+                </div>
+                <div class="meet-up-item small-item">
+                    <img src="assests/20190629020825_IMG_4298.jpg" alt="First Meetup Photo 8">
+                </div>
+                <div class="meet-up-item small-item">
+                    <img src="assests/20190629020825_IMG_4298[1].jpg" alt="First Meetup Photo 7">
+                </div>
+                <div class="meet-up-item small-item">
+                    <img src="assests/20190629020918_IMG_4299[1].jpg" alt="First Meetup Photo 7">
+                </div>
+                <div class="meet-up-item large-item">
+                    <img src="assests/20190629021025_IMG_4301[1].jpg" alt="First Meetup Photo 4">
+                </div>
+                <div class="meet-up-item large-item">
+                    <img src="assests/WhatsApp Image 2024-11-06 at 11.17.36_78138f75.jpg" alt="First Meetup Photo 4">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="assests/WhatsApp Image 2024-11-06 at 11.15.14_4b35c2b2.jpg" alt="First Meetup Photo 5">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="assests/WhatsApp Image 2024-11-06 at 11.20.35_4c91d13d.jpg" alt="First Meetup Photo 5">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="assests/WhatsApp Image 2024-11-06 at 11.20.36_3499273e.jpg" alt="First Meetup Photo 5">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="assests/WhatsApp Image 2024-11-06 at 11.20.38_8be7ddba.jpg" alt="First Meetup Photo 5">
+                </div>
+               
+                
+                <!-- Repeat for more photos... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Meetup Section -->
+    <section class="meet-up-section">
+        <h2 style="color: #eee;">Colombo Meetup clicks</h2>
+        <div class="container">
+            <!-- Second Meetup Grid (Collage Style) -->
+            <div class="gallery-grid">
+                <!-- Add 30 photos, some will span across 2 columns or rows -->
+
+                
+                <div class="meet-up-item large-item">
+                    <img src="colombo meetup/IMG_1902.JPG" alt="First Meetup Photo 1">
+                </div>
+                <div class="meet-up-item">
+                    <img src="colombo meetup/IMG_1890.JPG" alt="First Meetup Photo 2">
+                </div>
+                <div class="meet-up-item">
+                    <img src="colombo meetup/IMG_1887.JPG" alt="First Meetup Photo 3">
+                </div>
+                <div class="meet-up-item large-item">
+                    <img src="colombo meetup/IMG_1986.JPG" alt="First Meetup Photo 4">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="colombo meetup/IMG_1899.JPG" alt="First Meetup Photo 5">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="colombo meetup/IMG_1902.JPG" alt="First Meetup Photo 6">
+                </div>
+                <div class="meet-up-item small-item">
+                    <img src="colombo meetup/IMG_1905.JPG" alt="First Meetup Photo 7">
+                </div>
+                <div class="meet-up-item small-item">
+                    <img src="colombo meetup/IMG_1911.JPG" alt="First Meetup Photo 8">
+                </div>
+                <div class="meet-up-item small-item">
+                    <img src="colombo meetup/IMG_1991.JPG" alt="First Meetup Photo 7">
+                </div>
+                <div class="meet-up-item small-item">
+                    <img src="colombo meetup/IMG_2046.JPG" alt="First Meetup Photo 7">
+                </div>
+                <div class="meet-up-item large-item">
+                    <img src="colombo meetup/IMG_1961.JPG" alt="First Meetup Photo 4">
+                </div>
+                <div class="meet-up-item large-item">
+                    <img src="colombo meetup/IMG_1962.JPG" alt="First Meetup Photo 4">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="colombo meetup/IMG_1960.JPG" alt="First Meetup Photo 5">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="colombo meetup/IMG_2045.JPG" alt="First Meetup Photo 5">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="colombo meetup/IMG_1977.JPG" alt="First Meetup Photo 5">
+                </div>
+                <div class="meet-up-item ">
+                    <img src="colombo meetup/IMG_2044.JPG" alt="First Meetup Photo 5">
+                </div>
+
+                <!-- About Us Button -->
+                 
+                <!-- <div class="about-us-btn-section">
+                    <a href="about.html" class="about-us-btn">About Us>></a>
+                </div> -->
+            </section>
+               
+                
+                <!-- Repeat for more photos... -->
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <footer>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="meetup.html">meetups click</a></li>
+            <li><a href="aboutus.html">about us</a></li>
+        </ul>
+        
+        <p>
+            Copyright 2024 © Jaffna IS - All Rights Reserved.
+
+        </p>
+    </footer>
+</body>
+</html>
