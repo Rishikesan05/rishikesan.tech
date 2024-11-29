@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "To Be Published",
+			"path": "."
+		},
+		{
+			"name": "about us",
+			"path": "D:/university mates photos/uni website/about us"
+		},
+		{
+			"name": "assests",
+			"path": "D:/university mates photos/uni website/assests"
+		},
+		{
+			"name": "colombo meetup",
+			"path": "D:/university mates photos/uni website/colombo meetup"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "To Be Published"
+	}
+}

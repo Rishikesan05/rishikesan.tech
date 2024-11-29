@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - University Memories</title>
     <link rel="icon" type="image" href="assests/WhatsApp Image 2024-11-19 at 19.16.33_a5683f47.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="html/html/homepage/style.css">
+ 
     <style>
   
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -16,7 +20,7 @@ body{
     /* overflow: hidden; */
 }
 
-        header{
+header{
     width: 1200px;
     max-width: 90%;
     margin: auto;
@@ -27,11 +31,111 @@ body{
     align-items: center;
     position: relative;
     z-index: 100;
-    margin-bottom: 50px;
+}.toggle_btn{
+    display: none;
 }
+.dropdownmenu{
+        display: none;
+        position: absolute;
+        justify-content: center;
+        /* right: 2rem; */
+        top: 5px;
+        gap: 2px;
+        right: 200px;
+        width: 300px;
+        height: 0;
+        background: rgba(25, 19, 59, 0.501);
+        backdrop-filter:blur(10px) ;
+        border-radius: 10px;
+        overflow: hidden;
+        transition:height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        
+    }
+    .dropdownmenu.open{
+        height: 250px;
+    }
+    .dropdownmenu li{
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #eee;
+        font-weight: 600;
+    }
+    .dropdownmenu .action_btn{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+    }
+    header .menu li ul.dmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background-color: #222; */
+    padding: 5px 0;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); */
+    list-style: none;
+    color: aliceblue;
+}
+
+.dropdownmenu li ul.dmenu li {
+    padding: 2px 15px;
+    color: wheat
+;}
+
+.dropdownmenu li ul.dmenu li a {
+    color: #fff;
+    display: block;
+}
+
+header .menu li ul.dmenu li a:hover {
+    background-color: #444;
+    border-radius: 3px;
+}
+
+/* Show Dropdown on Hover */
+.dropdownmenu li:hover ul.dmenu {
+    display: block;
+    z-index: 1000;}
+    @media(max-width:992px){
+        #navbar .links,
+        #navbar .action_btn {
+            display: none;
+        }
+        #navbar .toggle_btn{
+            display: block;
+        }
+        .dropdownmenu{
+            display: block;
+        }
+        .toggle_btn{
+            display: flex;
+        }
+        .cont{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+        @media(max-width:576px){
+            .dropdownmenu{
+                left: 2rem;
+                width: unset;
+            }
+            .dropdownmenu.open{
+                position: absolute;
+                left: 80px;
+                width: 180px;
+                height: 180px;
+          
+            }
+        }
+
 header .logo{
     font-weight: bold;
 }
+/* Main Menu Styling */
 header .menu {
     padding: 0;
     margin: 0;
@@ -40,7 +144,65 @@ header .menu {
     justify-content: center;
     gap: 20px;
     font-weight: 500;
+    color: aliceblue;
 }
+
+header .menu li {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+
+    
+}
+
+header .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+ 
+}
+
+/* header .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;} */
+
+
+/* Dropdown Menu Styling */
+header .menu li ul.dmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background-color: #222; */
+    padding: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    list-style: none;
+    color: aliceblue;
+}
+
+header .menu li ul.dmenu li {
+    padding: 2px 15px;
+    color: aliceblue;
+}
+
+header .menu li ul.dmenu li a {
+    color: #fff;
+    display: block;
+}
+
+/* header .menu li ul.dmenu li a:hover {
+    background-color: #444;
+    border-radius: 3px;
+} */
+
+/* Show Dropdown on Hover */
+header .menu li:hover ul.dmenu {
+    display: block;
+    z-index: 1000;
+}
+
 a{
     color: #fff;
     text-decoration: none;
@@ -61,7 +223,8 @@ ul{
             text-align: center;
             padding: 20px 0;
             background: linear-gradient(to bottom, #0a0a0a, #a9acb1); 
-            
+            display: flex;
+            flex-direction: row;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
          margin-bottom: 100px;
@@ -73,6 +236,10 @@ ul{
             color: #f0f2f4;
             margin-bottom: 20px;
             text-transform: uppercase;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 80px;
         }
 
         /* Team Members */
@@ -190,10 +357,17 @@ ul{
             .team-member {
                 width: 100%; /* Single column on very small screens */
             }
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+            .container h2{
+                margin: 0;
+            }
         }
         footer{
     background-color: #05042d;
-    height: 80px;
+    height: 120px;
 }
 footer p {
     padding-top: 20px ;
@@ -201,6 +375,7 @@ footer p {
     padding-right: 55px;
     align-items: center;
     text-align:center;
+    color: tan;
   }    
   footer ul{
     display: flex;
@@ -218,26 +393,61 @@ footer p {
    margin-top: 20px;
     gap: 15px;
     align-items: flex-start;
-    background-color: rgba(207, 116, 41, 0.501);
+    /* background-color: rgba(207, 116, 41, 0.501); */
     padding:  8px 10px ;
     /* border-radius: 25px; */
+  }
+  footer ul li a{
+    color: #eee;
+  }
+  .cont{
+    display: flex;
+    flex-direction: row;
   }
 
     </style>
 </head>
 <body>
+    <header>            <div class="logo"><img src="" alt=""></div>
 
-    <header>
-        <div class="logo"><img src="" alt=""></div>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="meetup.html">meetups click</a></li>
-            <li><a href="html/html/homepage/index.html">E-library</a></li>
-            <li><a href="aboutus.html">about us</a></li>
+        <ul class="menu" id="navbar">
+            <li ><a style="color: #eee;" href="index.html">Home</a></li>
+            <li ><a style="color: #eee;" href="meetup.html">Meetups</a></li>
+            <li >
+                <a style="color: #eee;" href="html/html/homepage/index.html">E-library</a>
+                <!-- <ul class="dmenu">
+                    <li><a style="color: #eee;" href="html/html/homepage/index.html">Home</a></li>
+                    <li><a style="color: #eee;" href="html/html/homepage/books.html">Books</a></li>
+                    <li><a style="color: #eee;" href="html/html/homepage/about.html">About</a></li>
+                    <<li><a href="html/html/homepage/review.html">Reviews</a></li>
+                    <li><a href="html/html/homepage/newarrivals.html">New Arrivals</a></li>
+                    <li><a href="html/html/homepage/contact.html">Contact Us</a></li>
+                </ul> -->
+            </li>
+            <li ><a style="color: #eee;" href="aboutus.html">About Us</a></li>
         </ul>
-       
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+         
+        </div>
+        <div class="dropdownmenu"> <li>
+            <a style="color: #eee;" href="index.html">Home</a></li>
+            <li><a style="color: #eee;" href="meetup.html">Meetups</a></li>
+            <li>
+                <a  style="color: #eee;"href="html/html/homepage/index.html">E-library</a>
+                <ul class="dmenu">
+                    <!-- <li><a href="html/html/homepage/index.html">Home</a></li>
+                    <li><a href="html/html/homepage/books.html">Books</a></li>
+                    <li><a href="html/html/homepage/about.html">About</a></li> -->
+                    <!-- <li><a href="html/html/homepage/review.html">Reviews</a></li>
+                    <li><a href="html/html/homepage/newarrivals.html">New Arrivals</a></li>
+                    <li><a href="html/html/homepage/contact.html">Contact Us</a></li>
+                </ul> --></ul>
+            </li>
+            <li><a style="color: #eee;" href="aboutus.html">About Us</a></li>
+       </div>
     </header>
-
+    
     <!-- Team Members Section -->
    <style>
     button{
@@ -287,27 +497,27 @@ footer p {
                 <div class="team-member">
                     <img src="about us/1.jpg" alt="John Doe">
                     <h3>V. Mathujan</h3>
-                    <p>Director  (IS STUDENT)</p> <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com""><button> <h3> Contact </h3></button></a>
+                    <p>Director </p> <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com""><button> <h3> Contact </h3></button></a>
                 </div>
                 <!-- Member 2 -->
                 <div class="team-member">
                     <img src="about us/2.jpg" alt="Jane Smith">
                     <h3>S. Vithuckshana</h3>
-                    <p>Script Writer  (IS STUDENT)</p> <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
+                    <p>Script Writer </p> <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
                 </div>
 
                 <!-- Member 3 -->
                 <div class="team-member">
                     <img src="about us/3.jpg" alt="Robert Brown">
                     <h3>S. Rishikesan</h3>
-                    <p>Editor  (IS STUDENT)</p>   <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
+                    <p>Editor </p>   <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
                 </div>
 
                 <!-- Member 4 -->
                 <div class="team-member">
                     <img src="about us/4.jpg" alt="Robert Brown">
                     <h3>M. Mathurya</h3>
-                    <p>Videographer   (IS STUDENT)</p>   <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
+                    <p>Videographer  </p>   <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
        
                 </div>
 
@@ -315,7 +525,7 @@ footer p {
                 <div class="team-member">
                     <img src="about us/5.jpg" alt="Robert Brown">
                     <h3>E. Mayoori</h3>
-                    <p>Programmer  (IS STUDENT)</p><p></p>   <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
+                    <p>Programmer </p><p></p>   <a style="color: #010101;"  href="mailto:bsrishi2003@gmail.com"><button> <h3> Contact </h3></button></a>
             </div>
             <!-- Stay Tuned Button -->
             <!-- <div class="stay-tuned-section">
@@ -349,13 +559,28 @@ footer p {
         </div>
     </section>
     <footer>
-      
+        <ul class="enu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="meetup.html">meetups click</a></li>
+            <li><a href="aboutus.html">about us</a></li>
+        </ul>
         
         <p>
             Copyright 2024 © Jaffna IS - All Rights Reserved.
 
         </p>
     </footer>
-
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnicon = document.querySelector('.toggle_btn i');
+        const dropdownMenu = document.querySelector('.dropdownmenu');
+        toggleBtn.onclick= function(){
+            dropdownMenu.classList.toggle('open')
+            const isopen = dropdownMenu.classList.contains('open');
+            toggleBtnicon.classList=isopen
+            ? 'fa-solid fa-xmark'
+             : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
 </html>

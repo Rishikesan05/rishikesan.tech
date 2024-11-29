@@ -5,32 +5,600 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Memories</title>
     <link rel="icon" type="image" href="assests/WhatsApp Image 2024-11-19 at 19.16.33_a5683f47.jpg">
-    <link rel="stylesheet" href="home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="html/html/homepage/style.css">
+    
 </head>
 <body>
         <!-- header -->
-    <header>
-        <div class="logo"><img src="" alt=""></div>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="meetup.html">meetups click</a></li>
-            <li><a href="html/html/homepage/index.html">E-library</a></li>
-            <li><a href="aboutus.html">about us</a></li>
-        </ul>
-        <!-- <div class="search">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-            </svg>
-        </div> -->
-    </header>
+        <header>            <div class="logo"><img src="" alt=""></div>
 
+            <ul class="menu" id="navbar">
+                <li ><a style="color: #eee;" href="index.html">Home</a></li>
+                <li ><a style="color: #eee;" href="meetup.html">Meetups</a></li>
+                <li >
+                    <a style="color: #eee;" href="html/html/homepage/index.html">E-library</a>
+                    <ul class="dmenu">
+                        <li><a style="color: #eee;" href="html/html/homepage/index.html">Home</a></li>
+                        <li><a style="color: #eee;" href="html/html/homepage/books.html">Books</a></li>
+                        <li><a style="color: #eee;" href="html/html/homepage/about.html">About</a></li>
+                        <!-- <li><a href="html/html/homepage/review.html">Reviews</a></li>
+                        <li><a href="html/html/homepage/newarrivals.html">New Arrivals</a></li>
+                        <li><a href="html/html/homepage/contact.html">Contact Us</a></li>
+                    </ul> --></ul>
+                </li>
+                <li ><a style="color: #eee;" href="aboutus.html">About Us</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+             
+            </div>
+            <div class="dropdownmenu"> <li>
+                <a style="color: #eee;" href="index.html">Home</a></li>
+                <li><a style="color: #eee;" href="meetup.html">Meetups</a></li>
+                <li>
+                    <a  style="color: #eee;"href="html/html/homepage/index.html">E-library</a>
+                    <ul class="dmenu">
+                        <!-- <li><a href="html/html/homepage/index.html">Home</a></li>
+                        <li><a href="html/html/homepage/books.html">Books</a></li>
+                        <li><a href="html/html/homepage/about.html">About</a></li> -->
+                        <!-- <li><a href="html/html/homepage/review.html">Reviews</a></li>
+                        <li><a href="html/html/homepage/newarrivals.html">New Arrivals</a></li>
+                        <li><a href="html/html/homepage/contact.html">Contact Us</a></li>
+                    </ul> --></ul>
+                </li>
+                <li><a style="color: #eee;" href="aboutus.html">About Us</a></li>
+           </div>
+        </header>
+        
     <!-- slider -->
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: Poppins;
+    margin: 0;
+    background-color: #010101;
+    color: #eee;
+    /* overflow: hidden; */
+}
+*p{
+    color:wheat;
+}
+svg{
+    width: 25px;
+}
+header{
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+.toggle_btn{
+            display: none;
+        }
+.dropdownmenu{
+        display: none;
+        position: absolute;
+        justify-content: center;
+        /* right: 2rem; */
+        top: 5px;
+        gap: 2px;
+        right: 200px;
+        width: 300px;
+        height: 0;
+        background: rgba(25, 19, 59, 0.501);
+        backdrop-filter:blur(10px) ;
+        border-radius: 10px;
+        overflow: hidden;
+        transition:height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        
+    }
+    .dropdownmenu.open{
+        height: 150px;
+    }
+    .dropdownmenu li{
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #eee;
+        font-weight: 600;
+    }
+    .dropdownmenu .action_btn{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+    }
+    header .menu li ul.dmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background-color: #222; */
+    padding: 5px 0;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); */
+    list-style: none;
+    color: aliceblue;
+}
+
+.dropdownmenu li ul.dmenu li {
+    padding: 2px 15px;
+    color: wheat
+;}
+
+.dropdownmenu li ul.dmenu li a {
+    color: #fff;
+    display: block;
+}
+
+header .menu li:hover {
+    color: #dfd706;
+
+}
+
+/* Show Dropdown on Hover */
+.dropdownmenu li:hover ul.dmenu {
+    display: block;
+    z-index: 1000;}
+    @media(max-width:992px){
+        #navbar .links,
+        #navbar .action_btn {
+            display: none;
+        }
+        #navbar .toggle_btn{
+            display: block;
+        }
+        .dropdownmenu{
+            display: block;
+        }
+        .toggle_btn{
+            display: flex;
+        }
+    }
+        @media(max-width:576px){
+            .dropdownmenu{
+                left: 2rem;
+                width: unset;
+                
+            }
+            .dropdownmenu.open{
+                position: absolute;
+                left: 80px;
+                width: 180px;
+                height: 180px;
+          
+            }
+        }
+
+header .logo{
+    font-weight: bold;
+}
+/* Main Menu Styling */
+header .menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+header .menu li {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+
+    
+}
+
+header .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+ 
+}
+
+/* header .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;} */
+
+
+/* Dropdown Menu Styling */
+header .menu li ul.dmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background-color: #222; */
+    padding: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    list-style: none;
+    color: aliceblue;
+}
+
+header .menu li ul.dmenu li {
+    padding: 2px 15px;
+    color: aliceblue;
+}
+
+header .menu li ul.dmenu li a {
+    color: #fff;
+    display: block;
+}
+
+/* header .menu li ul.dmenu li a:hover {
+    background-color: #444;
+    border-radius: 3px;
+} */
+
+/* Show Dropdown on Hover */
+header .menu li:hover ul.dmenu {
+    display: block;
+    z-index: 1000;
+}
+
+/* css slider */
+.slider{
+    height: 100vh;
+    margin-top: -50px;
+    position: relative;
+}
+.slider .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.slider .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .list .item::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        to top, #000 40%, transparent
+    );
+}
+.slider .list .item .content{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}
+.slider .list .item .content p{
+    color: aliceblue;
+}
+.slider .list .item .content p:nth-child(1){
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: white;
+}
+.slider .list .item .content h2{
+    font-size: 90px;
+    margin: 0;
+    color: #eee;
+}
+.slider .list .item.active{
+    opacity: 1;
+    z-index: 10;
+}
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3){
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2{
+    animation-delay: 1s;
+}
+.slider .list .item.active p:nth-child(3){
+    animation-duration: 1.3s;
+}
+.arrows{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 100;
+}
+.arrows button{
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #eee;
+    color: black;
+}
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+}
+.thumbnail::-webkit-scrollbar{
+    width: 0;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.thumbnail .item.active{
+    filter: brightness(1.5);
+}
+.thumbnail .item .content{
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+
+@media screen and (max-width: 678px) {
+    .thumbnail{
+        justify-content: start;
+    }
+    .slider .list .item .content h2{
+        font-size: 25px;
+    }
+    .arrows{
+        top: 10%;
+    }
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    color: gold;
+}
+.container{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    border-top:  saddlebrown 1px solid ;
+    border-bottom:saddlebrown 1px solid ;
+    border-radius: 15px;
+
+}
+.container1{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    border-bottom:wheat 1px solid;
+    border-radius: 15%;
+
+}
+.sabara1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.sabara1 p{
+    padding-top: 200px;
+    margin-top: 100px;
+}
+.sabara1 h1{
+    width:300px;
+    height: auto;
+    margin-right: 100px;
+    padding: 20px;
+    margin-top: 0;
+    font-weight: 800;
+    margin-left: 20px;
+  
+}
+.sabara1 img{
+    width:500px;
+    height: auto;
+    margin: 20px;
+      border-radius: 25px;
+  
+}
+.sabara2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 50px;
+}
+.sabara2 img{
+    width:500px;
+    height: auto;
+    margin: 20px;
+    margin-left: 50px;
+      border-radius: 25px;
+}
+.sabara3{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 50px;
+}
+.sabara3 img{
+    width:500px;
+    height: auto;
+    margin: 20px;
+    margin-left: 50px;
+    border-radius: 25px;
+
+}
+.sabara4{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 50px;
+}
+.sabara4 img{
+    width:250px;
+    height: auto;    margin-left: 80px;
+    margin:  0 50px;
+      border-radius: 25px;
+}
+
+.container p{
+    color: #fff;
+    font-size: 18px;
+    margin: 30px;
+}
+.container h2{
+    color: #fff;
+    font-size: 2.5rem;
+    margin: 0px;
+    padding-left: 30px;
+}
+.container1 p{
+    color: #fff;
+    font-size: 18px;
+    margin: 30px;
+}
+.container1 h2{
+    color: #fff;
+    font-size: 2.5rem;
+    margin: 0px;
+    padding-left: 30px;
+}
+footer{
+    background-color: #05042d;
+    height: 120px;
+}
+footer p {
+    padding-top: 60px ;
+    padding-left: 55px;
+    padding-right: 55px;
+    align-items: center;
+    text-align:center;
+    color: tan;
+  }    
+  footer ul{
+    display: flex;
+    /* justify-content: space-around; */
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+    justify-content: space-around;
+       gap: 15px;
+       flex-direction: row;
+  }
+  footer ul li{
+    color: #fff;
+    font-size: 15px;
+   margin: 50px 20px;
+
+    gap: 15px;
+    align-items: flex-start;
+    /* background-color: rgba(207, 116, 41, 0.501); */
+    padding:  8px 10px ;
+    /* border-radius: 25px; */
+  }
+  footer ul li a{
+    color: #eee;
+  }
+  
+
+  @media (max-width:977px) {
+    .container{
+        flex-direction: column;
+        flex-wrap: wrap;
+
+
+    } 
+    .container1{
+       display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+       
+        
+    }
+    .container img{
+        width: 300px;
+    }
+    .container1 img{
+        width: 300px;
+    }
+    .container p{
+        font-size: 14px;
+    }
+    .container1 p{
+        font-size: 14px;
+    }
+    .slider .list .item .content h2 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .slider .list .item .content p {
+        font-size: 14px;
+        /* letter-spacing: 5px; */
+    }
+    .slider.list.item::after {
+   width: 450px;
+    }
+    .menu li{
+        text-align: center;
+    }
+  }
+ 
+     </style>
 
     <div class="slider">
         <!-- list Items -->
         <div class="list">
             <div class="item active">
                 <img src="colombo meetup/IMG_1960.JPG">
+                <img src="" alt="">
                 <div class="content">
                     <p></p>
                     <h2>Colombomeetup</h2>
@@ -144,7 +712,7 @@
             making a meaningful impact in the ever-evolving digital world.  <br>  <a style="color: rgb(165, 165, 42);" href="https://www.sab.ac.lk/computing/undergraduate/bsc-is-about">to explore more</a>
             </p></div> 
     </div>
-    <div class="container"> 
+    <div class="container1"> 
          <div class="writing"> 
             <h2>Colombo meetup</h2><br>
             <p>
@@ -154,7 +722,8 @@
               get comfortable with each other. Laughter and friendly competition brought us closer as we played games 
               that let us show off our skills and sense of humor. 
             This initial gathering set a positive tone for our friendships, giving us a sense of belonging before we even began our studies.
-            </p></div> 
+            </p>
+        <p><a style="color: rgb(165, 165, 42);"  href="meetup.html#Second-meetup">To view clicks</a></p></div> 
         <div class="sabara2">
             <img src="assests/WhatsApp Image 2024-11-06 at 11.20.36_3499273e.jpg" alt="">
           
@@ -177,10 +746,10 @@
               day sharing stories, playing games, and taking in the peaceful surroundings. This meetup strengthened 
               our bonds even further, making us feel like a 
             tight-knit group ready to support each other through our university journey.
-            </p></div>
+            </p><p><a  style="color: rgb(165, 165, 42);" href="meetup.html">To view clicks</a></p></div>
          
     </div>
-    <div class="container">
+    <div class="container1">
          <div class="writing"> 
             <h2> Thank you card</h2><br>
             <p>
@@ -199,14 +768,30 @@
 
 
     <script src="app.js"></script>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnicon = document.querySelector('.toggle_btn i');
+        const dropdownMenu = document.querySelector('.dropdownmenu');
+        toggleBtn.onclick= function(){
+            dropdownMenu.classList.toggle('open')
+            const isopen = dropdownMenu.classList.contains('open');
+            toggleBtnicon.classList=isopen
+            ? 'fa-solid fa-xmark'
+             : 'fa-solid fa-bars'
+        }
+    </script>
     <footer>
-        <!-- <ul class="menu">
-            <li><a href="home .html">Home</a></li>
+        <ul class="enu">
+            <li><a href="index.html">Home</a></li>
             <li><a href="meetup.html">meetups click</a></li>
             <li><a href="aboutus.html">about us</a></li>
-        </ul> -->
+        </ul>
         
-        <p>
+        <p style=" padding-top: 60px ;
+        padding-left: 55px;
+        padding-right: 55px;
+        align-items: center;
+        text-align:center;">
             Copyright 2024 © Jaffna IS - All Rights Reserved.
 
         </p>

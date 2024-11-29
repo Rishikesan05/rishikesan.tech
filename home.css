@@ -21,10 +21,12 @@ header{
     position: relative;
     z-index: 100;
 }
+
 header .logo{
     font-weight: bold;
 }
-header .menu{
+/* Main Menu Styling */
+header .menu {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -33,6 +35,60 @@ header .menu{
     gap: 20px;
     font-weight: 500;
 }
+
+header .menu li {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+header .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+ 
+}
+
+/* header .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;} */
+
+
+/* Dropdown Menu Styling */
+header .menu li ul.dmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background-color: #222; */
+    padding: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    list-style: none;
+}
+
+header .menu li ul.dmenu li {
+    padding: 2px 15px;
+}
+
+header .menu li ul.dmenu li a {
+    color: #fff;
+    display: block;
+}
+
+/* header .menu li ul.dmenu li a:hover {
+    background-color: #444;
+    border-radius: 3px;
+} */
+
+/* Show Dropdown on Hover */
+header .menu li:hover ul.dmenu {
+    display: block;
+    z-index: 1000;
+}
+
 /* css slider */
 .slider{
     height: 100vh;
@@ -427,3 +483,4 @@ font-size: 0.5rem;
         text-align: center;
     }
   }
+ 
